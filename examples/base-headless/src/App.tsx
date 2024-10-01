@@ -1,5 +1,6 @@
 import { GitHubBanner, Refine, ErrorComponent } from "@refinedev/core";
 import dataProvider from "@refinedev/simple-rest";
+import { dataProviderKY } from "@refinedev/simple-rest";
 import routerProvider, {
   NavigateToResource,
   UnsavedChangesNotifier,
@@ -16,7 +17,8 @@ const App: React.FC = () => {
     <BrowserRouter>
       <GitHubBanner />
       <Refine
-        dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
+        dataProvider={dataProviderKY("https://api.fake-rest.refine.dev")}
+        // dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
         routerProvider={routerProvider}
         resources={[
           {
